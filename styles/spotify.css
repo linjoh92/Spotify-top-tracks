@@ -250,6 +250,8 @@ input:-webkit-autofill {
     }
 
     .artist-track {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
