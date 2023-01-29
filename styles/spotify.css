@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
     --primary-color: #181818;
     --secondary-color : #ffffff;   
@@ -11,14 +18,20 @@ html{
 }
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body{
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 100%;
     margin: 0;
 }
@@ -45,11 +58,20 @@ h3{
 }
 
 main {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     padding: 30px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .info {
@@ -59,40 +81,52 @@ main {
 }
 
 .titel {
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: 0.2rem;
     color: var(--theird-color);
-    margin-bottom: 0;
     font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .artist-track {
-    align-items: center;
-    color: var(--secondary-color);
-    display: flex;
-    font-weight: 600;
-    justify-content: space-between;
-    margin: 5px;
-    text-align: center;
-    color: #181818;
+            align-items: center;
+            justify-content: space-between;
+        -ms-flex-align: center;
+        -ms-flex-pack: justify;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
     background: #f1f3f4;
     border-radius: 40px;
-    padding: 0px 20px;  
+    color: var(--primary-color);
     cursor: default;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    font-weight: 600;
+    margin: 5px;
+    padding: 0px 20px;  
+    text-align: center;
+    text-align: left;
 }
 
 .image{
     width: auto;
     height: 500px;
     padding: 40px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .btn-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 40px 10px;
 }
 
@@ -126,6 +160,26 @@ opacity: 80%;
     outline: none;
 }
 
+input::-webkit-input-placeholder{
+    color: gray;
+    font-size: 1rem;
+}
+
+input::-moz-placeholder{
+    color: gray;
+    font-size: 1rem;
+}
+
+input:-ms-input-placeholder{
+    color: gray;
+    font-size: 1rem;
+}
+
+input::-ms-input-placeholder{
+    color: gray;
+    font-size: 1rem;
+}
+
 input::placeholder{
     color: gray;
     font-size: 1rem;
@@ -136,16 +190,42 @@ input:-webkit-autofill {
 }
 
 .artist-info{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .artist-track-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 700px;
+}
+
+.error-text{
+    color: var(--secondary-color);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.error-song {
+    color: #ff0000;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 @media screen and (max-width: 740px) {
@@ -159,18 +239,27 @@ input:-webkit-autofill {
     }
 
     .artist-track-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         width: 370px;
     }
 
     .artist-track {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         text-align: center;
         border-radius: 0;
         padding-top: 20px;
     }
   
-
 }
